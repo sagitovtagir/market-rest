@@ -1,0 +1,20 @@
+{% extends "default_template/base.html" %}
+{% block aside %}
+{% endblock %}
+{% block main %}
+<div class="login">
+
+        <h4 class="card-title">Введите имя пользователя и пароль</h4>
+{{data}}
+        <form method="post">
+            {% csrf_token %}
+            <input type="text" autocomplete="username" v-model="username">
+            <input type="password" autocomplete="current-password" v-model.password="password">
+
+
+
+            <button type="submit" class="btn btn-primary btn-block">Войти на сайт</button>
+        </form>
+
+</div>
+{% endblock %}
